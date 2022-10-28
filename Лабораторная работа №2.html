@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratornaya_2</title>
+
+    
+</head>
+<script>
+     function checkIsNumber(){
+        var ipAddress = document.getElementById("form:ipAddress").value;
+        var reg = /\b(25[0-5]|2[0-4][0-9]|[1-9]?[1-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/;
+        if(reg.test(ipAddress)){ 
+           alert ("Ваш IP-адрес верный");
+           return true;
+        }else{
+           alert("Здесь нет верного IP-адреса");
+           return false;
+        }
+    } 
+    </script> 
+<body>
+    <lable class= "control-lable" id = "inpusename"> Введите ваш IP для проверки</lable>
+    <input type="text" name = "memberAddress" id="form:ipAddress">
+    <button id="butt" onclick="checkIsNumber()">Проверить</button>
+</body>
+</html>
